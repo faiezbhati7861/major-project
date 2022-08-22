@@ -1,0 +1,86 @@
+%%writefile templates/index.html
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<title>Machine Learning Lab Experiment Deployment</title>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+<style><!DOCTYPE html>
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}?
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+
+<body>
+      
+<div class="" style="background-color:blue;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+<center><p style="font-size:40px;color:white;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
+<center><p style="font-size:30px;color:white;margin-top:10px;">Department of Computer Engineering</p></center> 
+<center><p style="font-size:25px;color:white;margin-top:10px;">Machine Learning Lab Experiment Deployment</p></center> 
+</div>
+</div>
+</div>
+
+<div class="login">
+<h2 >Artificial Neural network Classificationn</h2>
+<h4>Developed by MUHAMMED FAIEZ BHATI</h4>
+<!-- Main Input For Receiving Query to our ML -->
+<form action="{{ url_for('predict')}}"method="get">
+
+     
+      <div class="mb-3">
+   <label for="Traffic_Signal">Has Traffic signal </label>
+   <select name="Traffic_Signal" id="Traffic_Signal">
+    <option value="0">False</option>
+    <option value="1">True</option>
+       </select>
+      </div>
+      <div class="mb-3">
+   <label for="cars">Is Active Member</label>
+   <select name="activemember" id="activemember">
+    <option value="0">No</option>
+    <option value="1">Yes</option>
+       </select>
+      </div>
+       <div class="mb-3"> 
+  <label for="exampleFormControlInput1" class="form-label">Salary</label>
+      <input type="number"  name="Rain" id="rain" value=""min="0.0" max="10" placeholder="1" required="required">
+      </div>
+  <div class="col-auto">
+ 
+    <button type="submit" class="btn btn-danger">predict Exited</button>
+  </div>
+</form>
+
+<br>
+<br>
+{{ prediction_text }}
+
+</div>
+
+<div class="" style="background-color:blue;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Machine Learning Lab Experiment 7</p></center> 
+</div>
+</div>
+</div>
+</body>
+</html>
